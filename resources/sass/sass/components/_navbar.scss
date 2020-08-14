@@ -1,0 +1,344 @@
+$bg-color-mf-navbar: #a50059;
+//$bg-color-mf-navbar: transparent;
+
+$bg-color-link-lvl1: darken($bg-color-mf-navbar, 7.5%);
+//$bg-color-link-lvl1: #3498db;
+$color-link-lvl1: #eee;
+
+$bg-color-link-lvl2: darken($bg-color-mf-navbar, 8.5%);
+$color-link-lvl2: #666;
+
+$bg-color-link-lvl3: darken($bg-color-mf-navbar, 10%);
+$color-link-lvl3: #666;
+
+.mf-navbar {
+    background-color: $bg-color-mf-navbar;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 5001;
+    &.fixed-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    ul,
+    ol {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    > .box-hoverable {
+        height: 100%;
+        width: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        //        background-color: lighten($bg-color-link-lvl1, 15%);
+        background-color: rgba(white, 0.23);
+        border-bottom: 4px solid #eee;
+        @include trans("width 0.3s, transform 0.3s");
+        z-index: 0;
+    }
+    > .logo {
+        float: $floatL;
+        padding: {
+            left: 30px;
+            right: 30px;
+        }
+        @include maxLarge {
+            padding: {
+                left: 15px;
+                right: 15px;
+            }
+        }
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .text {
+            font-size: 26px;
+            padding: 0;
+            margin: 0;
+            @include maxLarge {
+                font-size: 22px;
+            }
+        }
+        .img {
+            max-width: 100%;
+            height: 80%;
+            @include maxLarge {
+                height: 70%;
+            }
+        }
+    }
+    .content-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+        &.list-center {
+            justify-content: center;
+        }
+        &.list-start {
+            justify-content: flex-start;
+        }
+        &.list-end {
+            justify-content: flex-end;
+        }
+        @include maxLarge {
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+            &.on-show-sidebar {
+                justify-content: flex-end;
+            }
+        }
+        > .overlay {
+            @include overlay(fixed, 5003, rgba(black, 0.75));
+            display: none;
+        }
+        .btn-show-sidebar {
+            display: none;
+            .icon {
+                width: 50px;
+                height: 40px;
+                background-color: transparent;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 8px 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                cursor: pointer;
+                @include trans("0.25s");
+                &:hover {
+                    background-color: #ddd;
+                    > span {
+                        background-color: $bg-color-mf-navbar;
+                    }
+                }
+                > span {
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: #ddd;
+                    @include trans("all 0.25s");
+                }
+                &.toggle {
+                    border: none;
+                    &:hover {
+                        background-color: rgba(#ddd, 0.9);
+                    }
+                    > span {
+                        &:nth-of-type(2) {
+                            display: none;
+                        }
+                        &:first-child {
+                            transform: rotate(-41deg) translate(-5px, 5px);
+                        }
+                        &:last-child {
+                            transform: rotate(43deg) translate(-4px, -3px);
+                        }
+                    }
+                }
+            }
+        }
+        .list-horizontal {
+            .header-sidebar {
+                display: none;
+            }
+            display: flex;
+            align-items: center;
+            height: 100%;
+            > li {
+                height: 100%;
+                position: relative;
+                > a {
+                    display: inline-flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: {
+                        left: 12px;
+                        right: 12px;
+                    }
+                    font-size: 15px;
+                    line-height: 1.3;
+                    color: $color-link-lvl1;
+                    @include maxLarge {
+                        padding: {
+                            left: 5px;
+                            right: 5px;
+                        }
+                        font-size: 14px;
+                    }
+                    > i {
+                        padding: {
+                            left: 5px;
+                            right: 5px;
+                        }
+                    }
+                }
+                &.active {
+                    > a {
+                        > i {
+                        }
+                    }
+                }
+                &.dropdown {
+                    &.has-btn {
+                        > a {
+                            padding: {
+                                #{$posR}: 30px;
+                            }
+                            > i {
+                                display: none;
+                            }
+                        }
+                        &:hover > .btn-open-dropmenu > i {
+                            background-color: rgba(white, 0.2);
+                            padding: 2px;
+                        }
+                        > .btn-open-dropmenu {
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            #{$posR}: 8px;
+                            color: $color-link-lvl1;
+                            > i {
+                                @include trans("all 0.25s");
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    > .dropmenu {
+                        background-color: #fbfbfb;
+                        @extend .shadow2;
+                        position: absolute;
+                        top: 150%;
+                        #{$posL}: 0;
+                        min-width: 100%;
+                        white-space: nowrap;
+                        @include trans("top 0.4s, opacity 0.4s");
+                        opacity: 0;
+                        z-index: -1;
+                        display: none;
+                        &.show-dropmenu {
+                            opacity: 1;
+                            top: 100%;
+                        }
+                        &.hide-dropmenu {
+                            opacity: 0;
+                            top: 50%;
+                            z-index: -1;
+                        }
+                        > li {
+                            @include trans(background-color 0.2s);
+                            &:hover,
+                            &.active {
+                                > a {
+                                    color: lighten($color-link-lvl2, 50%);
+                                }
+                                background-color: $bg-color-link-lvl2;
+                            }
+                            > a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                padding: 10px 15px;
+                                color: $color-link-lvl2;
+                                > i {
+                                    padding: {
+                                        left: 5px;
+                                        right: 5px;
+                                    }
+                                }
+                            }
+                            &.active {
+                                > a {
+                                    > i {
+                                    }
+                                }
+                            }
+                            &.subdropdown {
+                                position: relative;
+                                > a {
+                                    > i {
+                                        &.fa-angle-right {
+                                        }
+                                    }
+                                }
+                                > .subdropmenu {
+                                    background-color: #fbfbfb;
+                                    @extend .shadow1;
+                                    position: absolute;
+                                    top: 0;
+                                    #{$posL}: 100%;
+                                    min-width: 100%;
+                                    white-space: nowrap;
+                                    @include trans(
+                                        "left 0.4s, right 0.4s, opacity 0.4s"
+                                    );
+                                    opacity: 0;
+                                    z-index: -1;
+                                    display: none;
+                                    > li {
+                                        @include trans(background-color 0.2s);
+                                        &.active,
+                                        &:hover {
+                                            > a {
+                                                color: lighten(
+                                                    $color-link-lvl3,
+                                                    50%
+                                                );
+                                            }
+                                            background-color: $bg-color-link-lvl3;
+                                        }
+                                        > a {
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            padding: 10px 15px;
+                                            color: $color-link-lvl3;
+                                            > i {
+                                                padding: {
+                                                    left: 5px;
+                                                    right: 5px;
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            > a {
+                                                > i {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .list-vertical {
+            @extend %style-sidebar;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.header {
+    @include clearfix;
+    padding: 25px 5px;
+    border-bottom: 1px solid #DDD;
+    .logo {
+        width: 30%;
+        float: $floatL;
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 0;
+            color: $greyColor;
+        }
+    }
+    .navbar {
+        width: 70%;
+        float: $floatL;
+        @include shadow(2);
+        background-color: $redColor;
+        border-radius: 3px;
+        @include pfx(display, flex, $allPrefixes);
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        li {
+            flex-basis: 20%;
+            a {
+                display: block;
+                padding: 20px 15px;
+                text-decoration: none;
+                color: #DDD;
+                text-align: center;
+                &:hover {
+                    color: #FFF;
+                }
+            }
+            &.active a {
+                color: #FFF;
+            }
+        }
+    }
+}

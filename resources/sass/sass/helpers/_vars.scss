@@ -1,0 +1,52 @@
+// variabels media query
+$maxWidthMobile: 600px;
+$minWidthMobile: 601px;
+$maxWidthSmall: 767px;
+$minWidthSmall: 768px;
+$maxWidthMedium: 991px;
+$minWidthMedium: 992px;
+$maxWidthLarge: 1199px;
+$minWidthLarge: 1200px;
+
+$allPrefixes: webkit moz o;
+
+$redColor: #db125f;
+$greyColor: #9c9c9c;
+
+$mainColor: #375471;
+$mainColorL: #3c6ea0;
+
+$floatL: left;
+$floatR: right;
+
+$posL: left;
+$posR: right;
+
+$textL: left;
+$textR: right;
+
+$right: right;
+$left: left;
+
+@if $lang == rtl {
+    $floatL: right;
+    $floatR: left;
+    $posL: right;
+    $posR: left;
+    $textL: right;
+    $textR: left;
+    
+    $right: left;
+    $left: right;
+    
+} @else if $lang == ltr {
+    $floatL: left;
+    $floatR: right;
+    $posL: left;
+    $posR: right;
+    $textL: left;
+    $textR: right;
+    
+    $right: right;
+    $left: left;
+}

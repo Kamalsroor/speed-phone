@@ -1,0 +1,33 @@
+$bg-color-mf-navbar: $mainColor;
+//$bg-color-mf-navbar: transparent;
+
+$bg-color-link-lvl1: darken($bg-color-mf-navbar, 7.5%);
+//$bg-color-link-lvl1: #3498db;
+$color-link-lvl1: #EEE;
+
+$bg-color-link-lvl2: darken($bg-color-mf-navbar, 8.5%);
+$color-link-lvl2: #666;
+
+$bg-color-link-lvl3: darken($bg-color-mf-navbar, 10%);
+$color-link-lvl3: #666;
+
+.mf-sidenav {
+    z-index: 5001;
+    ul, ol {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+    > .overlay {
+        @include overlay(fixed, 5003, rgba(black, 0.75));
+        display: none; 
+    }
+    .list-vertical {
+        @extend %style-sidebar;
+        left: 0;
+    }
+}

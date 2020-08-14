@@ -1,0 +1,18 @@
+.form-transition .show-messages {
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+    font-size: 18px;
+}
+.form-transition .btn-submit .loading {
+    display: inline-block;
+    height: 30px;
+    margin-left: 10px;
+    display: none;
+}
+
+
+#table-add-transition td,
+#table-add-transition th {
+    width: 25% !important;
+}

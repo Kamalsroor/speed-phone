@@ -1,0 +1,31 @@
+.form-transition .show-messages {
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+    font-size: 18px;
+}
+.form-transition .btn-submit .loading {
+    display: inline-block;
+    height: 30px;
+    margin-left: 10px;
+    display: none;
+}
+
+
+.Quantity2{
+    width: 12% !important;
+
+}
+
+
+.TypeOfProduct{
+    width: 15% !important;
+}
+
+.ProductName{
+    width: 35% !important;
+}
+
+.Quantity{
+    width: 8% !important;
+}

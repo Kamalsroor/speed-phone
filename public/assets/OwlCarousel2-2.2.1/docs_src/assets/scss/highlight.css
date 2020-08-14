@@ -1,0 +1,154 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+/* line 7, highlight.scss */
+pre {
+  overflow-y: hidden;
+  margin-bottom: 2rem;
+  background: #f8f8f8;
+}
+
+/* line 13, highlight.scss */
+.hljs {
+  display: block;
+  color: #333;
+  background: #f8f8f8;
+  padding: 2rem;
+  line-height: 1.4;
+  overflow-x: scroll;
+}
+
+/* line 22, highlight.scss */
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #B9B9B9;
+  font-style: italic;
+}
+
+/* line 30, highlight.scss */
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 42, highlight.scss */
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+/* line 48, highlight.scss */
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #bd240d;
+}
+
+/* line 55, highlight.scss */
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+/* line 63, highlight.scss */
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
+}
+
+/* line 70, highlight.scss */
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+/* line 78, highlight.scss */
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+/* line 86, highlight.scss */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+/* line 92, highlight.scss */
+.hljs-regexp {
+  color: #009926;
+}
+
+/* line 96, highlight.scss */
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #333333;
+}
+
+/* line 104, highlight.scss */
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+/* line 110, highlight.scss */
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+/* line 120, highlight.scss */
+.hljs-deletion {
+  background: #fdd;
+}
+
+/* line 124, highlight.scss */
+.hljs-addition {
+  background: #dfd;
+}
+
+/* line 128, highlight.scss */
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+/* line 132, highlight.scss */
+.hljs-chunk {
+  color: #aaa;
+}
+
+/*# sourceMappingURL=highlight.css.map */

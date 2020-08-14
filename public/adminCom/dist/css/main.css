@@ -1,0 +1,78 @@
+.link-paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.description_editor {
+    width: 100%;
+    height: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.wrapper-all-images {
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid #ddd;
+    padding: 15px;
+}
+.wrapper-all-images .box-image {
+    flex: 25%;
+    max-width: 25%;
+    height: 200px;
+    padding: 10px;
+}
+.wrapper-all-images .box-image .ezdz-dropzone > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font: bold 20px arial;
+    padding: 5px;
+}
+@media (max-width: 992px) {
+    .wrapper-all-images .box-image {
+        flex: 50%;
+        max-width: 50%;
+        height: 150px;
+    }
+}
+
+.preview-video-youtube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.preview-video-youtube .preview {
+    width: 540px;
+    border: 3px solid #ddd;
+    padding: 20px;
+}
+
+/* Style Header Template **************************************************************/
+.main-header .navbar {
+    background-color: #296e96 !important;
+    min-height: 70px !important;
+}
+.main-sidebar {
+    padding-top: 70px !important;
+}
+.main-header .logo {
+    height: 70px !important;
+    line-height: 70px !important;
+    background-color: #f9f9f9 !important;
+}
+.main-header .logo:hover {
+    background-color: #f4f4f4 !important;
+}
+
+
+/* modal **********************************************************/
+
+.modal .modal-body {
+    word-break: break-all;
+}
