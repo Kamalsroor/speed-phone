@@ -16,6 +16,7 @@ class MobilatEx extends Model
         'accormobiles',
         'totals',
         'active',
+        'note',
         'user_id'
     ];
 

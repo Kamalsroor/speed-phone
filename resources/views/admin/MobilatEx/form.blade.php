@@ -79,3 +79,7 @@ data-row-standard='
 
 <br>
 <br>
+<div class="form-group">
+        {!! Form::label('ملاحظات', 'ملاحظات ') !!}
+        {!! Form::textarea('note', null, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+</div>

@@ -159,13 +159,14 @@ class MobilatExController extends Controller
             $MobilatEx = MobilatEx::create([
                 'CustomerNames' => $request->CustomerNames,
                 'premission_id' => $request->premission_id,
+                'note' => $request->note,
                 'order_id' => $request->order_id,
                 'accormobiles' =>  $Entacc,
                 'totals' => $total,
                 'date' => $request->date,
                 'user_id' => $user_id,
                 ]);
-    
+                
             // save transition details
             $Ent = 2;
             for($i = 0 ; $i < count($request->Prodact_name); $i++){
@@ -327,7 +328,7 @@ class MobilatExController extends Controller
             'date' => $request->date,
             'totals' => $total,
             'user_id' => $user_id,
-
+            'note' => $request->note,
             ]);
             
             // save transition details

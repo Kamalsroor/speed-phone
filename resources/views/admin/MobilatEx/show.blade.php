@@ -147,6 +147,10 @@ right: 644px;
           .user-image{
             float: left;
           }
+
+          .text-center{
+            text-align: center;
+          }
     </style>
   </head>
   <body>
@@ -241,6 +245,10 @@ $MobilatDetails4 = count($MobilatDetails3);
         
           <h3 class="box-title-Signature"><strong>التوقيع :</strong> </h3>
           <h3 class="box-title-Signature"><strong>الرقم القومي :</strong> </h3>
+          @if($MobilatEx->note != null )
+          <h3 class="text-center box-title-Signature"><strong>ملاحظات : </strong> </h3>
+          <h3 class="text-center box-title-Signature"><strong>{{ $MobilatEx->note }}</strong> </h3>
+          @endif
         </div>
         <!-- /.box-body -->
       </div>
