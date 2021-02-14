@@ -80,3 +80,7 @@ data-row-standard='
 
 <br>
 <br>
+<div class="form-group">
+        {!! Form::label('ملاحظات', 'ملاحظات ') !!}
+        {!! Form::textarea('note', $MobilatExDetails[0]->MobilatEx->note, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+</div>

@@ -23,6 +23,6 @@ class PrometerRequestsDetails extends Model
     }
 
     public function Mobilat() {
-        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id');
+        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id')->withDefault(['name' => 'غير موجود']);
     }
 }

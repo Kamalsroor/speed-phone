@@ -81,12 +81,13 @@ use App\MobilatExDetails;
         <thead>
         <tr>
         <th>السريال</th>
+            <th>ملاحظات</th>
             <th>اسم الصنف</th>
             <th>اسم العميل</th>
             <th>رقم اذن الصرف</th>
             <th>رقم اذن الاضافه</th>
             <th>رقم الفاتوره</th>
-            <th>رقم التاريخ</th>
+            <th> التاريخ</th>
 
 
         </tr>
@@ -97,12 +98,13 @@ use App\MobilatExDetails;
         <tfoot>
             <tr>
             <th>السريال</th>
+            <th>ملاحظات</th>
             <th>اسم الصنف</th>
             <th>اسم العميل</th>
             <th>رقم اذن الصرف</th>
             <th>رقم اذن الاضافه</th>
             <th>رقم الفاتوره</th>
-            <th>رقم التاريخ</th>
+            <th> التاريخ</th>
 
             </tr>
         </tfoot>

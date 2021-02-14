@@ -23,10 +23,10 @@ class MobilatEntDetails extends Model
         return $this->belongsTo('App\MobilatEnt', 'MobilatEntID', 'id');
     }
     public function Mobilat() {
-        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id');
+        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id')->withDefault(['name' => 'غير موجود']);
     }
     public function Acc() {
-        return $this->belongsTo('App\ACC', 'Prodact_name', 'id');
+        return $this->belongsTo('App\ACC', 'Prodact_name', 'id')->withDefault(['name' => 'غير موجود']);
     }
 
 }

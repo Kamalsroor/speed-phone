@@ -11,19 +11,14 @@ data-row-standard='
     <tr>
       <td>
       
-                      <select name="Prodact_name[]" class="sub_account custom_select  form-control">
+                      <select name="Prodact_name[]" class="sub_account select2 custom_select  form-control">
 
                 @foreach($Mobilats as $Mobilat) 
                 
-                <?php 
-                
-                $MobilatDetails4 = MobilatDetails::where('action',2)->where('Prodact_name', $Mobilat->id)->get();
-                $MobilatDetails3 = MobilatDetails::where('action',1)->where('Prodact_name', $Mobilat->id)->get();
-                $totalprodact = count($MobilatDetails3)-count($MobilatDetails4);
-                ?>
-                @if($totalprodact > 0 )
+           
+         
                 <option value= " {{ $Mobilat->id }} "> {{$Mobilat->name}} </option>
-                @endif
+           
                 @endforeach
             </select>
       </td>
@@ -56,19 +51,13 @@ data-row-standard='
         <tr>
           <td>
               
-            <select name="Prodact_name[]" class="sub_account custom_select  form-control">
+            <select name="Prodact_name[]" class="sub_account select2 custom_select   form-control">
 
                 @foreach($Mobilats as $Mobilat) 
                 
-                <?php 
-                
-                $MobilatDetails4 = MobilatDetails::where('action',2)->where('Prodact_name', $Mobilat->id)->get();
-                $MobilatDetails3 = MobilatDetails::where('action',1)->where('Prodact_name', $Mobilat->id)->get();
-                $totalprodact = count($MobilatDetails3)-count($MobilatDetails4);
-                ?>
-                @if($totalprodact > 0 )
+             
                 <option value= " {{ $Mobilat->id }} "> {{$Mobilat->name}} </option>
-                @endif
+          
                 @endforeach
             </select>
           </td>

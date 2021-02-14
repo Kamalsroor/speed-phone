@@ -40,43 +40,44 @@ class SearchsController extends Controller
          ->orderBy('id', 'desc')
          ->get();
          
+         $total_row = $data->count();
+         if($total_row > 0)
+         {
+          foreach($data as $row)
+          {
+           $output .= '
+           <tr>
+           <td>'.$row->sirarnamber.'</td>
+           <td>'.$row->note.'</td>
+            <td>'.$row->MobilatMod->name.'</td>
+            <td>'.$row->CustomersMod->name.'</td>
+            <td>'.$row->MobilatExID.'</td>
+            <td>'.$row->MobilatEntID.'</td>
+            <td>'.$row->created_at.'</td>
+            <td>'.$row->updated_at.'</td>
+           </tr>
+           ';
+          }
+         }
+         else
+         {
+          $output = '
+          <tr>
+           <td align="center" colspan="6">    <div  class="alert alert-info alert-dismissible ">
+           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+           <h4><i class="icon fa fa-warning"></i> للاسف هذا السريال غير موجود</h4>
+         </div>
+       </div></td>
+          </tr>
+          ';
+         }
+         $data = array(
+          'table_data'  => $output,
+          'total_data'  => $total_row
+         );
+   
+         echo json_encode($data);
       }
-      $total_row = $data->count();
-      if($total_row > 0)
-      {
-       foreach($data as $row)
-       {
-        $output .= '
-        <tr>
-        <td>'.$row->sirarnamber.'</td>
-         <td>'.$row->MobilatMod->name.'</td>
-         <td>'.$row->CustomersMod->name.'</td>
-         <td>'.$row->MobilatExID.'</td>
-         <td>'.$row->MobilatEntID.'</td>
-         <td>'.$row->created_at.'</td>
-         <td>'.$row->updated_at.'</td>
-        </tr>
-        ';
-       }
-      }
-      else
-      {
-       $output = '
-       <tr>
-        <td align="center" colspan="5">    <div  class="alert alert-info alert-dismissible ">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><i class="icon fa fa-warning"></i> للاسف هذا السريال غير موجود</h4>
-      </div>
-    </div></td>
-       </tr>
-       ';
-      }
-      $data = array(
-       'table_data'  => $output,
-       'total_data'  => $total_row
-      );
-
-      echo json_encode($data);
      }
     }
 

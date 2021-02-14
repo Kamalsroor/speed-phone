@@ -212,7 +212,7 @@ class prometerfinshController extends Controller
     //
     public function update(Request $request, $id)
     {
-
+       
         $this->validate(request(), [
 
             'sirarnamber.*' => 'required|min:6',
@@ -265,7 +265,7 @@ class prometerfinshController extends Controller
                 return response()->json(['errors' => [$error_count_array6]], 422);
                 // save transition
                 }
-            if ($countCleanHello !== 15 && $countCleanHello !== 12 && $countCleanHello !== 13 && $countCleanHello !== 11 ) {
+            if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 12 && $countCleanHello !== 13 && $countCleanHello !== 11 ) {
             return response()->json(['errors' => [$error_count_array3]], 422);
             // save transition
             }
@@ -316,6 +316,7 @@ class prometerfinshController extends Controller
                 'premission_id' => $request->premission_id,
                 'accormobiles' =>  $Entacc,
                 'totals' => $total,
+                'note' => $request->note,
                 'active' => $active,
                 'user_id' => $user_id,
                 ]);

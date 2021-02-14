@@ -18,13 +18,13 @@ class MobilatExTotal extends Model
     ];
 
     public function MobilatEx() {
-        return $this->belongsTo('App\MobilatEx', 'MobilatExtotalID', 'id');
+        return $this->belongsTo('App\MobilatEx', 'MobilatExtotalID', 'id')->withDefault(['name' => 'غير موجود']);
     }
     public function Mobilat() {
-        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id');
+        return $this->belongsTo('App\Mobilat', 'Prodact_name', 'id')->withDefault(['name' => 'غير موجود']);
     }
     public function Acc() {
-        return $this->belongsTo('App\ACC', 'Prodact_name', 'id');
+        return $this->belongsTo('App\ACC', 'Prodact_name', 'id')->withDefault(['name' => 'غير موجود']);
     }
 
 }

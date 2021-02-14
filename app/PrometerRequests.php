@@ -24,9 +24,9 @@ class PrometerRequests extends Model
     //     return $this->hanMany('App\permission_ex_Details_freight', 'permission_ex_id', 'id');
     // }
     public function Customersed() {
-        return $this->belongsTo('App\Customers', 'CustomerNames', 'id');
+        return $this->belongsTo('App\Customers', 'CustomerNames', 'id')->withDefault(['name' => 'غير موجود']);
     }
     public function UserMod() {
-        return $this->belongsTo('App\User', 'user_id', 'id');
+        return $this->belongsTo('App\User', 'user_id', 'id')->withDefault(['name' => 'غير موجود']);
     }
 }

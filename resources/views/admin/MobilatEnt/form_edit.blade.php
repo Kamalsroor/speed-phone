@@ -11,7 +11,11 @@ data-row-standard='
             {!! Form::text('sirarnamber[]', null, ['class' => ' form-control', 'placeholder' => 'السريال']) !!}
             <div class="show-error-amount invalid-feedback"></div>
         </td>
-
+        <td>
+            {!! Form::text('sraialnote[]', null, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+            <div class="show-error-amount invalid-feedback"></div>
+        </td>
+          
 
         <td class="text-center">
             <button type="button" class="btn btn-danger remove-row" data-id="0"><i class="fa fa-close"></i></button>
@@ -58,7 +62,11 @@ data-row-standard='
                 <td>
                   {!! Form::text('sirarnamber[]', $details->sirarnamber, ['class' => ' form-control', 'placeholder' => 'السريال']) !!}
                 </td>
-
+                <td>
+                    {!! Form::text('sraialnote[]', $details->note, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+                    <div class="show-error-amount invalid-feedback"></div>
+                </td>
+          
                 <td class="text-center">
                     @if(ChackSiralExit($details->sirarnamber))
                     

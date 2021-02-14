@@ -11,6 +11,10 @@
                   {!! Form::text('sirarnamber[]', $details->sirarnamber, ['class' => ' form-control', 'placeholder' => 'السريال']) !!}
                 </td>
 
+    <td>
+                    {!! Form::text('sraialnote[]', $details->note, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+                    <div class="show-error-amount invalid-feedback"></div>
+                </td>
                 <td class="text-center">
                     @if(ChackSiralExit($details->sirarnamber))
                     

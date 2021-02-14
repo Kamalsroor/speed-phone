@@ -1,3 +1,4 @@
+
 <?php
 use App\MobilatEntDetails;
 use App\MobilatExDetails;
@@ -144,6 +145,9 @@ right: 644px;
             font-weight: bold;
           }
 
+          .text-center{
+            text-align: center;
+          }
     </style>
   </head>
   <body>
@@ -195,7 +199,12 @@ right: 644px;
           <h3 class="box-title-Total"><strong> اجمالي العدد :</strong> {{ $MobilatEx->totals }} قطعه فقط لا غير</h3>
           <h3 class="box-title-Signature"><strong>استلمت انا الموقع ادناه / ............................................ الاصناف الوارده بالبيان عاليه بحاله جيده</strong> </h3>
           <h3 class="box-title-Signature"><strong>التوقيع :</strong> </h3>
-          <h3 class="box-title-Signature"><strong>الرقم القومي :</strong> </h3>      
+          <h3 class="box-title-Signature"><strong>الرقم القومي :</strong> </h3>    
+
+ @if($MobilatEx->note != null )
+          <h3 class="text-center box-title-Signature"><strong>ملاحظات : </strong> </h3>
+          <h3 class="text-center box-title-Signature"><strong>{{ $MobilatEx->note }}</strong> </h3>
+          @endif
 	  </div>
         <!-- /.box-body -->
       </div>

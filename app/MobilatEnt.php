@@ -24,7 +24,8 @@ class MobilatEnt extends Model
         return $this->hasMany('App\MobilatDetails', 'MobilatEntID', 'id');
     }
     public function UserMod() {
-        return $this->belongsTo('App\User', 'user_id', 'id');
+
+        return $this->belongsTo('App\User', 'user_id', 'id')->withDefault(['name' => 'غير موجود']);
     }
 
 }

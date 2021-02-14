@@ -213,7 +213,7 @@ class PrometerController extends Controller
     //
     public function update(Request $request, $id)
     {
-
+        
         $this->validate(request(), [
 
             'sirarnamber.*' => 'required|min:6',
@@ -221,8 +221,8 @@ class PrometerController extends Controller
          //   'CustomerNames' => 'required|max:350',
             'Total.*' => 'required|max:50',
         ]);
-
-
+            
+            
             // check on amount is integer
         
             $all_totals = [];
@@ -266,7 +266,7 @@ class PrometerController extends Controller
                 return response()->json(['errors' => [$error_count_array6]], 422);
                 // save transition
                 }
-            if ($countCleanHello !== 15 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
+            if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
             return response()->json(['errors' => [$error_count_array3]], 422);
             // save transition
             }
@@ -320,6 +320,7 @@ class PrometerController extends Controller
                 'CustomerNames' => $request->CustomerNames,
                 'premission_id' => $request->premission_id,
                 'accormobiles' =>  $Entacc,
+                'note' => $request->note,
                 'totals' => $total,
                 'active' => $active,
                 'user_id' => $user_id,
@@ -337,6 +338,7 @@ class PrometerController extends Controller
                         'MobilatExID' => $MobilatEx->id,
                             'CustomerNames' => $MobilatEx->CustomerNames,
                             'Prodact_name' => $request->Prodact_name[$i],
+                            'note' => $request->sraialnote[$i],
                             'sirarnamber' => $siral[$x],
                             'action' => $Ent,
                              'active' => $active,

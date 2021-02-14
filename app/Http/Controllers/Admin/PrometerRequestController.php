@@ -43,7 +43,7 @@ class PrometerRequestController extends Controller
     $Customers = Customers::get()->pluck('name', 'id')->toArray();
 
         $Mobilats = Mobilat::orderBy('name')->get();
-        // return view('admin.MobilatEx.add');
+
         return view('admin.PrometerRequest.add', compact('Mobilats','Customers'));
 
     }

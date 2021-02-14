@@ -64,10 +64,10 @@ public function store(Request $request)
         for($i = 0 ; $i < count($request->Total); $i++){
                         
         $all_totals = explode("\n" ,$request->sirarnamber[$i]);
-            if (count($all_totals) != $request->Total[$i] ) {
+        if (count($all_totals) != $request->Total[$i] ) {
+       
                 
-                
-           $mobilats = Mobilat::find($request->Product_name[$i]);
+           $mobilats = Mobilat::find($request->Prodact_name[$i]);
           $error_count_array = ['العدد المطلوب لا يساوي عدد السريالات .' . $request->Prodact_name[$i].' '. $mobilats->name];
                 return response()->json(['errors' => [$error_count_array]], 422);
             // save transition
@@ -105,7 +105,7 @@ public function store(Request $request)
 
     
         
-        if ($countCleanHello !== 15 && $countCleanHello !== 13 && $countCleanHello !== 11 && $countCleanHello !== 12 ) {
+        if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 13 && $countCleanHello !== 11 && $countCleanHello !== 12 ) {
         return response()->json(['errors' => [$error_count_array3]], 422);
         // save transition
         }
@@ -180,6 +180,7 @@ public function store(Request $request)
                         'Prodact_name' => $request->Prodact_name[$i],
                         'sirarnamber' => $cleanHello,
                         'date' => $request->date,
+                        'note' => $request->sraialnote[$i],
                         'action' => $Ent,
                         'user_id' => $user_id,
 
@@ -291,7 +292,7 @@ public function update(Request $request, $id)
         $error_count_array4 = ['هذا السريال مورد من قبل .' . $all_totalSiral ];
         $error_count_array5 = ['هذا السريال ليس من نفس الصنف .' . $all_totalSiral ];
 
-        if ($countCleanHello !== 15 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
+        if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
         return response()->json(['errors' => [$error_count_array3]], 422);
         // save transition
         }
@@ -328,6 +329,7 @@ public function update(Request $request, $id)
                     'CustomerNames' => $request->CustomerNames,
                     'sirarnamber' => $request->sirarnamber[$x],
                     'date' => $request->date,
+                    'note' => $request->sraialnote[$x],
                     'user_id' => $user_id,
                     'action' => $Ent,
                 ]

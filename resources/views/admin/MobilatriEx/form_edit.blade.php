@@ -15,7 +15,10 @@ data-row-standard='
           {!! Form::textarea('sirarnamber[]', null, ['class' => ' form-control', 'placeholder' => 'السريال']) !!}
           <div class="show-error-amount invalid-feedback"></div>
       </td>
-
+      <td>
+                    {!! Form::textarea('sraialnote[]', null, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
+                    <div class="show-error-amount invalid-feedback"></div>
+                </td>
 
         <td class="text-center">
             <button type="button" class="btn btn-danger remove-row" data-id="0"><i class="fa fa-close"></i></button>
@@ -46,6 +49,7 @@ data-row-standard='
         <tr>
           <th>اسم الصنف</th>
           <th>السريال</th>
+          <th>ملاحظات</th>
           <th>حذف</th>
         </tr>
     </thead>
@@ -68,6 +72,10 @@ data-row-standard='
                 </td>
                 <td>
                     {!! Form::textarea('sirarnamber[]', null, ['class' => ' form-control', 'placeholder' => 'السريال']) !!}
+                    <div class="show-error-amount invalid-feedback"></div>
+                </td>
+                <td>
+                    {!! Form::textarea('sraialnote[]', null, ['class' => ' form-control', 'placeholder' => 'ملاحظات']) !!}
                     <div class="show-error-amount invalid-feedback"></div>
                 </td>
                 <td class="text-center">

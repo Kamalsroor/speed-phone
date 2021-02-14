@@ -110,7 +110,7 @@ class MobilatExController extends Controller
                 return response()->json(['errors' => [$error_count_array6]], 422);
                 // save transition
                 }
-            if ($countCleanHello !== 15 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
+            if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11 ) {
             return response()->json(['errors' => [$error_count_array3]], 422);
             // save transition
             }
@@ -309,7 +309,7 @@ class MobilatExController extends Controller
             $countCleanHello = strlen($cleanHello);
             $error_count_array3 = ['هذا السريال غير صحيح .' . $all_totalSiral ];
     
-            if ($countCleanHello !== 15 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11) {
+            if ($countCleanHello !== 15  && $countCleanHello !== 18 && $countCleanHello !== 13 && $countCleanHello !== 12 && $countCleanHello !== 11) {
             return response()->json(['errors' => [$error_count_array3]], 422);
             // save transition
             }

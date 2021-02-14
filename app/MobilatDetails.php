@@ -20,6 +20,7 @@ class MobilatDetails extends Model
         'user_id',
         'active',
         'ACC',
+        'note',
     ];
 
 

@@ -114,6 +114,7 @@ class ACCExController extends Controller
                 'accormobiles' =>  $Entacc,
                 'totals' => $total,
                 'date' => $request->date,
+                'note' => $request->note,
                 'user_id' => $user_id,
                 ]);
                 
@@ -248,6 +249,7 @@ class ACCExController extends Controller
             'premission_id' => $request->premission_id,
             'order_id' => $request->order_id,
             'date' => $request->date,
+            'note' => $request->note,
             'totals' => $total,
             ]);
             // save transition details

@@ -24,7 +24,7 @@ class MobilatEx extends Model
         return $this->hasMany('App\MobilatDetails', 'MobilatExID', 'id');
     }
     public function Customersed() {
-        return $this->belongsTo('App\Customers', 'CustomerNames', 'id');
+        return $this->belongsTo('App\Customers', 'CustomerNames', 'id')->withDefault(['name' => 'غير موجود']);
     }
 
 }
