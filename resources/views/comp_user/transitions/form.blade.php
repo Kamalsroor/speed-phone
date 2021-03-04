@@ -1,11 +1,11 @@
-<table class="table table-bordered" id="table-add-transition" data-url-account-types="{{ route('get_account_types') }}" 
+<table class="table table-bordered" id="table-add-transition" data-url-account-types="{{ route('get_account_types') }}"
 data-row-standard='
     <tr>
         <td>
             {!! Form::select('account_type_id[]', $account_types, null, ['class' => 'account_type custom_select form-control']) !!}
         </td>
         <td>
-            {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select form-control']) !!}
+            {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
         </td>
         <td>
             {!! Form::select('action[]', ['from' => 'from', 'to' => 'to'], null, ['class' => 'action custom_select form-control']) !!}
@@ -33,7 +33,7 @@ data-row-standard='
                 {!! Form::select('account_type_id[]', $account_types, null, ['class' => 'account_type custom_select form-control']) !!}
             </td>
             <td>
-                {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select form-control']) !!}
+                {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
             </td>
             <td>
                 {!! Form::select('action[]', ['from' => 'from', 'to' => 'to'], null, ['class' => 'action custom_select form-control']) !!}
@@ -51,7 +51,7 @@ data-row-standard='
                 {!! Form::select('account_type_id[]', $account_types, null, ['class' => 'account_type custom_select form-control']) !!}
             </td>
             <td>
-                {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select form-control']) !!}
+                {!! Form::select('account_name_id[]', $sub_accounts, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
             </td>
             <td>
                 {!! Form::select('action[]', ['from' => 'from', 'to' => 'to'], null, ['class' => 'action custom_select form-control']) !!}

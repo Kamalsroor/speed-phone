@@ -2,7 +2,7 @@
 data-row-standard='
     <tr>
       <td>
-          {!! Form::select('Prodact_name[]', $ACC, null, ['class' => 'sub_account custom_select form-control']) !!}
+          {!! Form::select('Prodact_name[]', $ACC, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
       </td>
       <td>
             {!! Form::text('qualityacc[]', null, ['class' => 'amount form-control', 'placeholder' => 'الكميه']) !!}
@@ -17,7 +17,7 @@ data-row-standard='
     <!-- Description -->
     <div class="form-group">
         {!! Form::label('اسم العميل', 'اسم العميل') !!}
-        {!! Form::select('CustomerNames', $Customers, null, ['class' => 'sub_account custom_select form-control']) !!}
+        {!! Form::select('CustomerNames', $Customers, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label(' رقم الاذن', ' رقم الاذن') !!}
@@ -42,7 +42,7 @@ data-row-standard='
     <tbody>
         <tr>
           <td>
-              {!! Form::select('Prodact_name[]', $ACC, null, ['class' => 'sub_account custom_select form-control']) !!}
+              {!! Form::select('Prodact_name[]', $ACC, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
           </td>
           <td>
             {!! Form::text('qualityacc[]', null, ['class' => 'amount form-control', 'placeholder' => 'الكميه']) !!}

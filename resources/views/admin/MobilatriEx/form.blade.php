@@ -2,7 +2,7 @@
 data-row-standard='
     <tr>
       <td>
-          {!! Form::select('Prodact_name[]', $mobilats, null, ['class' => 'sub_account custom_select form-control']) !!}
+          {!! Form::select('Prodact_name[]', $mobilats, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
       </td>
       <td>
             {!! Form::text('Total[]', null, ['class' => 'amount form-control', 'placeholder' => 'الكميه']) !!}
@@ -47,7 +47,7 @@ data-row-standard='
     <tbody>
         <tr>
           <td>
-              {!! Form::select('Prodact_name[]', $mobilats, null, ['class' => 'sub_account custom_select form-control']) !!}
+              {!! Form::select('Prodact_name[]', $mobilats, null, ['class' => 'sub_account custom_select select2 form-control']) !!}
           </td>
           <td>
             {!! Form::text('Total[]', null, ['class' => 'amount form-control', 'placeholder' => 'الكميه']) !!}
