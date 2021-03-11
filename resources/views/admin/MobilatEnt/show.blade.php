@@ -121,10 +121,21 @@ right: 644px;
       }
 
       .prodact{
-        width: 700px;
-        border: 2px solid;
+          width: 700px;
+          border: 2px solid;
 
         }
+
+        .prodact-name{
+          width: 400px;
+          border: 2px solid;
+        }
+
+        .srial-name{
+          width: 200px;
+          border: 2px solid;
+        }
+
         .Quantity{
           width: 300px;
           border: 2px solid;
@@ -230,8 +241,8 @@ right: 644px;
    <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th class="prodact" >اسم الصنف</th>
-                <th class="Quantity">السريال</th>
+                <th class="prodact-name" >اسم الصنف</th>
+                <th class="srial-name">السريال</th>
                 <th class="note">الملاحظات</th>
             </tr>
             </thead>
@@ -239,14 +250,14 @@ right: 644px;
                 @foreach ($MobilatDetails as $details)
                 <tr>
 
-                  <td class="prodact2">
+                  <td class="prodact-name">
                     {{$details->MobilatMod->name}}
 
 
               </td>
 
-                   <td class="Quantity2">{{ $details->sirarnamber }}</td>
-                   <td class="note2">{{ $details->note }}</td>
+                   <td class="srial-name">{{ $details->sirarnamber }}</td>
+                   <td class="note">{{ $details->note }}</td>
                 </tr>
                 @endforeach
             </tbody>
