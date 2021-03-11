@@ -127,13 +127,15 @@ right: 644px;
         }
 
         .prodact-name{
-          width: 400px;
-          border: 2px solid;
+          width: 450px;
+    border: 2px solid;
+    font-size: 16px;
         }
 
         .srial-name{
-          width: 200px;
-          border: 2px solid;
+          width: 192px;
+    border: 2px solid;
+    font-size: 20px;
         }
 
         .Quantity{
@@ -142,8 +144,9 @@ right: 644px;
 
         }
         .note{
-          width: 300px;
-          border: 2px solid;
+          font-size: 16px;
+    width: 350px;
+    border: 2px solid;
 
         }
         .table tbody  {
