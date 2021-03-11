@@ -130,6 +130,11 @@ right: 644px;
           border: 2px solid;
 
         }
+        .note{
+          width: 300px;
+          border: 2px solid;
+
+        }
         .table tbody  {
 
           top: -14px;
@@ -147,6 +152,11 @@ right: 644px;
 
           }
           .Quantity2{
+            width: 300px;
+            border: 2px solid;
+
+          }
+          .note2{
             width: 300px;
             border: 2px solid;
 
@@ -192,7 +202,7 @@ right: 644px;
 
                   <td class="prodact2">
                     @php
-                  
+
                     $test = Mobilat::where('id', $details)->pluck('name');
                     $teswt = $test[0];
                     @endphp
@@ -214,7 +224,7 @@ right: 644px;
                        <h1> <strong> اجمالي العدد :</strong> {{ $MobilatEnt->totals }} قطعه فقط لا غير</h1>
                     </th>
                 </tr>
-             
+
             </tfoot>
           </table>
    <table class="table table-bordered table-striped">
@@ -222,7 +232,7 @@ right: 644px;
             <tr>
                 <th class="prodact" >اسم الصنف</th>
                 <th class="Quantity">السريال</th>
-
+                <th class="note">الملاحظات</th>
             </tr>
             </thead>
             <tbody>
@@ -236,6 +246,7 @@ right: 644px;
               </td>
 
                    <td class="Quantity2">{{ $details->sirarnamber }}</td>
+                   <td class="note2">{{ $details->note }}</td>
                 </tr>
                 @endforeach
             </tbody>
